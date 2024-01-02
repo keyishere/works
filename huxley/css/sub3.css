@@ -1,0 +1,122 @@
+@import url('common.css');
+
+#title { 
+    text-align: center; 
+    padding-top:154px; 
+}
+
+h2 {
+    font-size: 36px; 
+    margin-top:-11px; 
+    font-weight: 600;
+}
+
+#title>p { font-weight:100; color:#666; margin-top: 16px;}
+
+body { 
+      /* 배경 이미지 경로 설정 */
+      background-image: url('경로/이미지파일.jpg');
+
+      /* 배경 이미지 크기 조절 (옵션) */
+      background-size: cover;
+  
+      /* 배경 이미지 반복 설정 (옵션) */
+      background-repeat: no-repeat;
+  
+      /* 배경 이미지 위치 설정 (옵션) */
+      background-position: center top;
+}
+/* --------- 여기서부터 컨텐츠 구간---------- */
+
+#contents { /*border:1px solid red;*/ padding-top:53px; padding-bottom:60px;  }
+
+#menu_box {
+  display: flex; flex-wrap: wrap; justify-content: center; width:280px; 
+  margin: 0 auto;
+  box-shadow: 0px 0px 30px rgb(206, 206, 206);
+  margin-bottom: 50px;
+}
+
+#menu_box .review {
+  width: 140px; 
+  line-height: 35px; 
+  background: white; 
+  text-align: center;
+}
+
+
+
+#table {margin: 0 auto;}
+
+#table {
+  /*border:1px solid green;*/ 
+  width:1100px; 
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+#table>thead>tr {border-top:1px solid #B2B3B7; border-bottom:1px solid #B2B3B7;}
+#table>thead>tr>td {
+  height:49px; text-align: center; 
+ } 
+
+#table>tbody>tr {
+  height: 73px; 
+  border-bottom: 1px solid #ddd ;
+} /* tbody 게시글 제목 높이 */
+
+
+#table .nb {width: 50px}
+#table .tp {width: 30px}
+#table .tt {width: 750px}
+#table .wrt {width: 110px}
+#table .dd {width: 100px}
+#table .vw {width: 60px}
+
+tbody tr td small {font-size:13px;}
+tbody tr td {
+  font-size: 13px; 
+  font-weight: 600; 
+  text-align: center; 
+}
+
+#list_number {
+  display: flex;
+  justify-content: space-between;
+  width:400px; 
+  margin: 0 auto;
+  padding-bottom:69px;
+  /*background: yellowgreen;*/ 
+}
+
+.left {font-size: 18px; font-weight: 500; text-align: left; padding-left:12px;}
+
+#list_number ul {display: flex; }
+#list_number ul li { margin-right:3px; text-align: center;}
+#list_number ul li:last-child{margin-right: 0;} 
+
+
+#list_number ul li a {
+  border:1px solid white;
+  width:30px;  
+  line-height:30px; 
+  display: block; 
+  color:#3d3d3d; 
+  font-size: 11px; font-weight: 100; 
+  box-sizing: border-box;
+}
+#list_number .l1 a:hover {border: 1px solid #415967; background: #415967; color:white;}
+
+#list_number .l2 a {background: #eeeff0; border:1px solid #eeeff0;}
+#list_number .l2 a:hover { border:1px solid #415967;}
+
+
+#selec {width:414px; margin:0 auto;}
+#selec fieldset {border: none; }
+#selec select { outline: none; width:62px; height: 30px; border:white; margin-right:12px; text-align: center; font-size: 15px; color:#707070;}
+
+#selec input { width:300px; height:30px;  font-size: 16px; background: none; border:none; padding-left:10px; box-sizing: border-box; outline: none; border-bottom: 1px solid rgb(170, 170, 170);}
+#selec a { display: inline;  width: 30px; height: 30px; color: #415967; }
+
+#contents a { text-decoration: none; color: #415967 }
+#contents #table tbody tr td {font-weight:200;};

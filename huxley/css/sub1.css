@@ -1,0 +1,90 @@
+@import url('common.css');
+
+
+#title { 
+    text-align: center; 
+    padding-top:154px; 
+    padding-bottom: 60px;
+}
+
+#title>h2 {
+    font-size: 36px; 
+    margin-top:-11px; 
+    font-weight: 900;
+}
+#title>p { font-weight:100; color:#666; margin-top: 16px;}
+
+/* 서브비주얼 */
+.benefit img { display:block; margin: 0 auto; margin-bottom: 30px;}
+
+
+/* 입력양식필드 */
+#signup_form { width:1100px; padding:50px; box-sizing: border-box; background: white; margin:0 auto; margin-bottom: 50px;}
+#signup_form fieldset{ border: none;}
+
+
+/* 상세정보입력 */
+#signup_form ul li {display: flex; align-items: center; /* input-button 수평정렬 설정 */ border-top: 1px solid #eee;} 
+#signup_form ul li:last-child { border-bottom: 1px solid #eee; }
+#signup_form ul li label { display: inline-block; width:140px; line-height: 50px; } 
+.add { margin-left: 10px; font-size: 12px; }
+
+    /* button, select 설정 */
+    input[type=text] { height: 32px; width:150px; border:1px solid #ccc; outline: none; padding-left:10px; box-sizing: border-box;} 
+    input[type=password] { height: 30px; width:150px; border:1px solid #ccc; outline: none;  padding-left:10px; box-sizing: border-box;}
+    input[type=radio] {margin-left: 15px;}
+    select { border:1px solid #ccc; color: #666; outline: none; }
+
+    #signup_form ul li button {
+        cursor: pointer;
+        font-size: 12px;
+        transition:0.4s;
+        width:100px;
+        border: none; outline: none;
+        height: 34px; margin-left:10px;
+        background-color: #637581; color:white;
+    }
+    #signup_form ul li button:hover { background-color: white; color:#637581; border: 1px solid #637581; }
+    #signup_form ul li select {height:30px;}
+    #signup_form ul li .long { border:1px solid ccc; width:400px}
+    .dot {width:5px; height: 5px; background: #637581; border-radius: 50%; margin-right:10px;}
+    
+
+/* 전체동의 */
+.agment { margin-top:45px; margin-bottom: 20px; border:1px solid #ddd;}
+.agment .agd { font-weight: 600; line-height: 50px; padding-left: 30px; border-top: 1px dashed #ddd;}
+.agment .agd:nth-child(2) { border-top: 1px solid #ddd;}
+
+    /* button 설정 */
+    .agment button {border:none; margin-left:5px; margin-right:150px; border:1px solid #bbb; color:#555; font-size: 12px; padding:3px 10px; cursor: pointer;}
+    .agment p { padding-left: 30px; padding-bottom: 20px; font-size: 14px; color:#555;}
+
+
+/* 이용약관 */
+.policy { margin-bottom: 30px;} 
+.policy textarea {font-size: 14px; font-family: '나눔고딕'; outline: none; color:#555; border: 1px solid #ddd; } 
+
+
+/* 개인정보수집이용 */
+#signup_form table { width:100%; color:#777; margin-bottom: 20px; border-collapse: collapse;}
+#signup_form table thead td { background: #eee; padding:10px;}
+#signup_form table td { border:1px solid rgb(209, 209, 209); padding:8px; text-align: center; font-size: 14px; }
+#signup_form table tbody td { padding: 15px; }
+#signup_form table tbody td:nth-child(1) { background-color: #eee; width:10% }
+#signup_form table tbody td:nth-child(2) { width:30%}
+#signup_form table tbody td:nth-child(3) { width:30%}
+
+#signup_form h3 { line-height: 50px; font-size: 20px; font-weight: 500; } 
+
+
+/* 하단설명글 */
+#signup_form .desc {margin-top: 40px; font-size: 14px;}
+
+
+/* 확인취소 버튼 */
+.btns { text-align: center; padding-top: 50px; padding-bottom: 30px;}
+#signup_form .btn { padding:13px 40px; border: none; outline: none; }
+#signup_form .btn.yes { transition:0.2s; color:white; background: #637581; border: 1px solid #637581;}
+#signup_form .btn.yes:hover { color: #637581; background: white; border: 1px solid #637581;} 
+#signup_form .btn.no { transition:0.2s; border: 1px solid #ccc; background: white; }
+#signup_form .btn.no:hover { border: 1px solid #637581; background: white; }

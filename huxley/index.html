@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<title>Huxley</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<!-- 제이쿼리 -->
+<script src="js/jquery-3.7.1.min.js"></script>  
+<script src="js/gnbmove.js"></script> <!-- gnb, 스크롤이벤트 JQ 스크립트 -->
+
+
+<body>
+
+<!-- skip navigatoin -->
+<div class="skip_navigation">
+    <a href="#contents">본문 바로가기</a>
+    <a href="#footer">하단 바로가기</a>
+</div>
+<!-- // skip navigatoin -->
+
+<!-- <div id="tt" style="position:fixed; left:10px; top:200px; background: gray; color:black; font-size:33px; z-index:2000; ">0</div> -->
+
+
+ <!-- header -->
+ <header id="header"> 
+    <div class="inner">
+          
+           <div class="logo"><a href="index.html"><img src="images/logo_hder.png" alt="헉슬리"></a></div>
+           
+           <nav id="gnb">
+               
+               <h2 class="blind">주요메뉴</h2>  
+
+               <ul class="g1">
+
+                   <li class="main">
+
+                       <a href="#">PRODUCTS</a>
+                       <ul class="sub s1">
+                           <li>전체제품</li>
+                           <li>제품유형</li>
+                           <li>제품루틴</li>
+                           <li>스페셜세트</li>
+                       </ul>         
+
+                   </li>
+                   
+                   
+                   <li class="main">
+
+                       <a href="#">EVENT</a>
+                       <ul class="sub s2">
+                           <li>진행중 이벤트</li>
+                           <li>당첨자 발표</li>
+                       </ul>
+                   
+                   </li>
+
+                   <li class="main">
+
+                       <a href="#">COMMUNITY</a>
+                       <ul class="sub s3">
+                           <li><a href="sub3.html">REVIEW</a></li>
+                           <li><a href="sub3.html">MEDIA</a></li>
+                           <li><a href="sub3.html">CS CENTER</a></li>
+                       </ul>
+                   
+                   </li>
+
+                   <li class="main">
+
+                       <a href="#">BRAND</a>
+                       <ul class="sub s4">
+                           <li>브랜드</li>
+                       </ul>
+                   
+                   </li>
+
+                   <li class="main">
+
+                       <a href="#">STORE</a>
+                       <ul class="sub s5">
+                           <li><a href="#">판매처</a></li>
+                       </ul>
+                   
+                   </li>
+               </ul>
+               
+
+               
+           </nav> <!-- // GNB -->
+
+           
+           
+           <!-- uitll -->
+           <ul class="util">
+
+               <li><a href="#"><img src="images/utill_search.png" alt="검색" class="u1"></a></li>
+               <li><img src="images/utill_cart.png" alt="장바구니"></li>
+               <li><a href="#">0</a></li>
+
+           </ul>
+
+
+           <div class="gnb_bg"></div>      
+
+                 
+
+           <div id="topGnb">
+               <ul>
+                   <li><a href="sub2.html">LOGIN</a></li>
+                   <li><a href="sub1.html">JOIN</a></li>
+                   <li>NOTICE</li>
+                   <li>Q&amp;A</li>
+                   <li>I</li>
+                   <li><a href="#">English</a></li>
+                   <li><a href="#">中文</a></li>
+                   <li><a href="#">日本語</a></li>                    
+               </ul>
+           </div> <!-- top GNB // 우측상단 -->
+        
+   </div> <!--// inner-->
+   
+</header> 
+<!--// header -->   
+
+
+<!------------ visual ------------->
+
+<section id="visual"> 
+    
+     <div class="swiper visualgall">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/vs_bg1.jpg" alt="소중한 사람들과 함께하는 더욱 특별한 연말"></div>
+            <div class="swiper-slide"><img src="images/vs_bg1.jpg" alt="소중한 사람들과 함께하는 더욱 특별한 연말"></div>
+            <div class="swiper-slide"><img src="images/vs_bg1.jpg" alt="소중한 사람들과 함께하는 더욱 특별한 연말"></div>
+        </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>   
+    
+</section>
+<!------------ // visual ------------->
+
+
+<!------------ contents ------------->
+<section id="contents">
+  
+    <div id="con1">
+        <div class="wrap">
+            <a href="#" class="bestnew" onclick="return false"><h2>Best &amp New</h2></a>
+            <a href="#" class="promotion" onclick="return false"><h2>promotion</h2></a>
+        </div>
+
+        <div class="gallery">
+            
+            <div class="s">
+
+                <!-- Swiper -->
+                <div class="swiper bestnNew">
+
+                    <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" onclick="return false">
+                                    <img src="images/p1.jpg" alt="핸드크림&립밤세트">
+                                    <p class="pt">핸드 크림 &amp; 립밤세트</p>
+                                    <p class="pe">23,200원</p>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/p2.jpg" alt="핸드 크림 모로칸 가드너">
+                                <p class="pt">핸드 크림 모로칸 가드너</p>
+                                <p class="pe">13,500원</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/p3.jpg" alt="핸드 크림 포트 브레스">
+                                <p class="pt">핸드 크림 포트 브레스</p>
+                                <p class="pe">13,500원</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/p4.jpg" alt="핸드 크림 로즈 피커">
+                                <p class="pt">핸드 크림 로즈 피커</p>
+                                <p class="pe">13,500원</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/p5.jpg" alt="핸드 크림 선셋 포그">
+                                <p class="pt">핸드 크림 선셋 포그</p>
+                                <p class="pe">13,500원</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/p6.jpg" alt="핸드 크림 블루 메디나 탠저린">
+                                <p class="pt">핸드 크림 블루 메디나 탠저린</p>
+                                <p class="pe">13,500원</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/p7.jpg" alt="핸드 크림 베르베르 포트레이트">
+                                <p class="pt">핸드 크림 베르베르 포트레이트</p>
+                                <p class="pe">13,500원</p>                        
+                            </div>
+
+                    </div><!-- // swiper-wrapper -->
+
+
+                    <div class="swiper-scrollbar"></div>
+                        
+
+                </div>
+            </div> <!-- //.s -->
+
+
+
+        </div>
+        
+    </div> <!-- //#con1 -->
+    
+    <div id="con2">
+        <ul>
+            <li>
+                <a href="#" onclick="return false">
+                    <img src="images/s3p1.jpg" alt="카테고리이미지1">
+                    <div>Membership</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="return false">
+                    <img src="images/s3p2.jpg" alt="카테고리이미지2">
+                    <div>Special Gift</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="return false">
+                    <img src="images/s3p3.jpg" alt="카테고리 이미지3">
+                    <div>Huxley<br>Signature Showroom</div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div id="con3">
+        <div class="video">
+            <iframe width="1120" height="600" src="https://www.youtube.com/embed/EDebKC3DwN0" title="HUXLEY BODY MOROCCAN GARDENER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    
+</section>
+
+<footer id="footer">
+    <ul> 
+        <li id="info">
+
+            <ul class="i1">
+                <li>Huxley</li>
+                &#124;
+                <li>이용약관</li>
+                &#124;
+                <li>개인정보 처리방침</li>
+                &#124;
+                <li>제휴문의</li>
+            </ul>
+
+            <ul class="i2">
+                <li>(주)노드메이슨</li>
+                <li>대표이사 : 구자풍
+                <li>사업자등록번호:105-87-91243 [사업자정보확인]</li>
+                <li>고객센터 : 070-7123-0077</li>
+                <li>팩스 : 02-3141-6799</li>
+                <li>주소:서울시 마포구 토정로 119 (상수동, 노드메이슨 빌딩)</li>
+                <li>통신판매업 신고번호:제2013-서울마포-1474호</li>
+                <li>개인정보보호책임자:구자풍</li>
+            </ul>
+
+            <ul class="i3">
+                <li><img src="images/img_footer01.png.crdownload" alt="Black Shield 보안서버 작동중"></li>
+                <li><img src="images/img_footer02.png.crdownload" alt="주민번호+비밀번호 엔실쇼핑몰"></li>
+                <li><img src="images/img_footer03.png.crdownload" alt="Hardware Firewall"></li>
+                <li><img src="images/img_footer04.png.crdownload" alt="All ar 에스크로"></li>
+                <li>고객님은 현금구매시, 구매안전 서비스를 이용하실 수 있습니다.</li>
+                <li>에스크로 가입인증</li>
+            </ul>
+
+            <div class="i4">Copyrightⓒ2023 Huxley All Rights Reserved.</div>
+
+
+        </li> <!-- // info -->
+
+
+        <li id="touch">
+
+            <div class="tel">TEL. 070-7123-0077</div>
+
+            <table>
+                <caption class="blind">영업시간</caption>
+                <tr>
+                    <th scope="row">Mon-Fri.</td> 
+                    <td>10:00 ~ 17:00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lunch.</td> 
+                    <td>10:00 ~ 17:00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Close.</td> 
+                    <td>Sat,Sun,Holiday</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email.</td> 
+                    <td>help&#64;huxley.co.kr</td>
+                </tr>
+            </table>
+
+            <hr class="line"> <!-- 가로라인 -->
+
+            <div class="t1">
+                <ul id="sns">
+                    <li><img src="images/ico_facebook.png" alt="페이스북"></li>
+                    <li><img src="images/ico_instar.png.crdownload" alt="인스타그램"></li>
+                    <li><img src="images/ico_youtube.png.crdownload" alt="유튜브"></li>
+                </ul>
+
+               
+                <a href="#">top</a>
+             
+
+            </div>
+
+            
+            
+        </li>
+    </ul>
+    
+</footer>
+
+<!--
+<script>
+/* 초기설정 */
+const gnb = document.querySelector(".gnb");
+const gnb_bg = document.querySelector(".gnb_bg"); //서브박스
+const sub = document.querySelectorAll(".sub"); //서브
+
+gnb.addEventListener("mouseenter",menuOn); // 오버(enter)
+gnb.addEventListener("focusin",menuOn); // gnb영역안의 요소중 포커스가 되었을때 (웹접근성)
+
+function menuOn(){  
+   sub.forEach(function(e){e.style.height="453px" }); //서브메뉴 보이게하기
+   gnb_bg.style.height="453px"; //박스 펼쳐짐
+} 
+</script>
+-->
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/swiper.js"></script>
+
+
+
+
+</body>
+
+</html>
