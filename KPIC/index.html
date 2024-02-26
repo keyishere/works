@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>약학정보원 KPIC</title>
+
+<script src="js/jquery-3.6.0.min.js"></script> <!-- 제이쿼리 연결 -->
+<link rel="stylesheet" href="css/common.css"> <!-- 외부 css 연결 -->
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="inner">
+      <div class="logonsearch">
+        <h1><img src="images/logo.jpg" alt="약학정보원 로고"></h1>
+        <fieldset>
+          <legend class="blind">의약품검색</legend>
+            <select name="medic" id="medic">
+              <option value="all">의약품검색</option>
+              <option value="name">제품명</option>
+              <option value="ingredient">성분명</option>
+            </select>
+            <input type="text" id="search" placeholder="약물의 제품명 또는 성분명을 입력하세요.">
+            <input type="button" value="검 색">
+            <input type="button" value="상세검색">
+        </fieldset>
+        <div class="slogan">대한민국<br>의약품정보의<br>표준</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="gnb">
+    <nav>
+
+      <h2 class="blind">주요메뉴</h2>
+
+      <ul>
+        <li class="main">
+          <a href="#">의약품검색</a>
+          <ul class="sub">
+            <li><a href="#">의약품 상세검색</a></li>
+            <li><a href="#">의약품안전사용서비스 (DUR)</a></li>
+          </ul>
+        </li>
+        <li class="main">
+          <a href="#">의약품식별</a>
+          <ul class="sub">
+            <li><a href="#">식별검색</a></li>
+            <li><a href="#">식별표시 등록</a></li>
+          </ul>
+        </li>
+
+        <li class="main">
+          <a href="#">복약정보</a>
+          <ul class="sub">
+            <li><a href="#">제품별 복약정보</a></li>
+            <li><a href="#">픽토그램 복약정보</a></li>
+            <li><a href="#">제형별 복약정보</a></li>
+          </ul>
+        </li>
+        <li class="main">
+          <a href="#">성분정보</a>
+          <ul class="sub">
+            <li><a href="#">성분정보</a></li>
+            <li><a href="#">KPIC 약효분류</a></li>
+          </ul>
+        </li>
+        <li class="main">
+          <a href="#">상호작용</a>
+          <ul class="sub">
+            <li><a href="#">약물-약물 상호작용</a></li>
+            <li><a href="#">약물-음식 상호작용</a></li>
+          </ul>
+        </li>
+        <li class="main">
+          <a href="#">학술정보</a>
+          <ul class="sub middle">
+            <li><a href="#">팜리뷰</a></li>
+            <li><a href="#">허가 리뷰</a></li>
+            <li><a href="#">이슈 &amp; 트렌드</a></li>
+            <li><a href="#">약물백과</a></li>
+            <li><a href="#">신약평론</a></li>
+            <li><a href="#">부작용리스트</a></li>
+            <li><a href="#">해외의약뉴스</a></li>
+            <li><a href="#">질병정보</a></li>
+            <li><a href="#">한약정보</a></li>
+          </ul>
+        </li>
+        <li class="main">
+          <a href="#">자료실</a>
+          <ul class="sub right">
+            <li><a href="#">프로그램</a></li>
+            <li><a href="#">모바일앱</a></li>
+            <li><a href="#">전자도서관</a></li>
+            <li><a href="#">바로가기 서비스</a></li>
+          </ul>
+        </li>
+        <li class="main ">
+          <a href="#">알림/문의</a>
+          <ul class="sub right">
+            <li><a href="#">안정성 서한/속보</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">통합Q&amp;A</a></li>
+            <li><a href="#">이메일 문의</a></li>
+            <li><a href="#">광고/제휴문의</a></li>
+            <li><a href="#">포장이미지 등록</a></li>
+          </ul>
+        </li>
+        <li class="main">
+          <a href="#">회사소개</a>
+          <ul class="sub right">
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">회사개요</a></li>
+            <li><a href="#">주요사업</a></li>
+            <li><a href="#">제휴/고객사</a></li>
+            <li><a href="#">인재채용</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#" class="lines" title="사이트맵">
+        <div class="line l1"></div>
+        <div class="line l2"></div>
+        <div class="line l3"></div>
+      </a>
+    </nav>
+
+    <ul class="sitemap_list">
+      <li>
+        <h3>의약품검색</h3>
+        <ul>
+          <li>의약품 상세검색</li>
+          <li>의약품안전사용서비스(DUR)</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>의약품식별</h3>
+        <ul>
+          <li>식별검색</li>
+          <li>식별표시 등록</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>복약정보</h3>
+        <ul>
+          <li>제품별 복약정보</li>
+          <li>픽토그램 복약정보</li>
+          <li>제형별 복약정보</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>성분정보</h3>
+        <ul>
+          <li>성분정보</li>
+          <li>KPIC 약효분류</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>상호작용</h3>
+        <ul>
+          <li>약물약물 상호작용</li>
+          <li>약물음식 상호작용</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>학술정보</h3>
+        <ul>
+          <li>팜리뷰</li>
+          <li>허가리뷰</li>
+          <li>이슈 &amp; 트렌드</li>
+          <li>약물백과</li>
+          <li>신약평론</li>
+          <li>부작용 리포트</li>
+          <li>해외의약뉴스</li>
+          <li>질병정보</li>
+          <li>한약정보</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>자료실</h3>
+        <ul>
+          <li>프로그램</li>
+          <li>모바일앱</li>
+          <li>전자도서관</li>
+          <li>바로가기 서비스</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>알림/문의</h3>
+        <ul>
+          <li>안전성 서한 / 속보</li>
+          <li>공지사항</li>
+          <li>보도자료</li>
+          <li>통합 Q&amp;A</li>
+          <li>이메일 문의</li>
+          <li>광고 / 제휴 문의</li>
+          <li>포장이미지 등록</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>회사소개</h3>
+        <ul>
+          <li>인사말</li>
+          <li>회사개요</li>
+          <li>주요사업</li>
+          <li>제휴 / 고객사 </li>
+          <li>인재채용</li>
+          <li>찾아오시는 길</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>회원가입</h3>
+        <ul>
+          <li>회원가입</li>
+          <li>서비스 이용약관</li>
+          <li>개인정보 처리방침</li>
+          <li>이메일주소 무단수집거부</li>
+          <li>법적 책임의 한계</li>
+        </ul>
+      </li>
+      
+      
+    </ul>
+
+  </section>
+  <div class="gnb_bg"></div>
+  <div class="sitemap_bg"></div>
+
+
+  <section id="container">
+    <div class="inner">
+
+        <section class="con1">
+          <article>
+            <h2><a href="#">모양으로 약 찾기</a></h2>
+            <fieldset>
+              <input type="text" placeholder="약에 적힌 문자를 입력하세요">
+              <ul class="srch_color">
+                <li><div class="color wt"></div>하양</li>
+                <li><div class="color yel"></div>노랑</li>
+                <li><div class="color org"></div>주황</li>
+                <li><div class="color pnk"></div>분홍</li>
+                <li><div class="color red"></div>빨강</li>
+                <li><div class="color brw"></div>갈색</li>
+
+                <li><div class="color ylgr"></div>연두</li>
+                <li><div class="color grn"></div>초록</li>
+                <li><div class="color blgrn"></div>청록</li>
+                <li><div class="color bl"></div>파랑</li>
+                <li><div class="color drkbl"></div>남색</li>
+                <li><div class="color purple"></div>자주</li>
+
+                <li><div class="color violet"></div>보라</li>
+                <li><div class="color gray"></div>회색</li>
+                <li><div class="color blk"></div>검정</li>
+                <li><div class="color trs"></div>투명</li>
+                <li><div class="color all"></div>전체</li>
+                <li></li>
+              </ul>
+
+              <ul class="srch_selec">
+                <li><a href="#">모양 선택</a></li>
+                <li><a href="#">제형 선택</a></li>
+                <li><a href="#">분할선 선택</a></li>
+              </ul>
+
+              <div class="srch_btn">
+                <button class="re" title="다시입력">다시입력</button>
+                <button class="sc" title="검색">검색</button>
+              </div>
+
+            </fieldset>
+            
+          </article>
+
+          <article>
+            <ul class="s1banner">
+              <li><img src="images/s1banner01.jpg" alt="의약품 식별표시"></li>
+              <li><img src="images/s1banner02.jpg" alt="동물 의약품 검색"></li>
+            </ul>
+          </article>
+
+          <article>
+            <h2><a href="#">KPIC 약효분류 검색</a></h2>
+            <fieldset class="s1a3fds">
+              <legend class="blind">약효분류검색</legend>
+              <span class="t1">약효 분류명으로 검색</span> <a class="type_select">분류 선택하기</a>
+              <input type="text" placeholder="예 : 베타차단제"><button>검색</button>
+              <span class="t1">성분명으로 검색</span>
+              <input type="text"><button>검색</button>
+              
+            </fieldset>
+
+          </article>
+
+          <article>
+            <ul class="s1c4menu">
+              <li>
+                <img src="images/s1c4li_01.jpg" alt="의약품 상세검색" class="defaultimg">
+                <img src="images/s1c4lihover_01.jpg" alt="의약품 상세검색" class="hoverimg">
+              </li>
+              <li>
+                <img src="images/s1c4li_02.jpg" alt="복약정보" class="defaultimg">
+                <img src="images/s1c4lihover_02.jpg" alt="복약정보" class="hoverimg">
+              </li>        
+              <li>
+                <img src="images/s1c4li_03.jpg" alt="성분정보" class="defaultimg">
+                <img src="images/s1c4lihover_03.jpg" alt="성분정보" class="hoverimg">
+              </li>
+              <li>
+                <img src="images/s1c4li_04.jpg" alt="상호작용" class="defaultimg">
+                <img src="images/s1c4lihover_04.jpg" alt="상호작용" class="hoverimg">
+              </li>
+            </ul>
+          </article>
+
+        </section>
+        <section class="con2">
+          <article class="a1">
+            <ul class="s2c1banner">
+              <li><img src="images/s2c1banner01.jpg" alt="약물백과 애보글립틴"></li>
+              <li><img src="images/s2c1banner02.jpg" alt="약물백과 애보글립틴"></li>
+              <li><img src="images/s2c1banner03.jpg" alt="약물백과 애보글립틴"></li>
+              <li><img src="images/s2c1banner04.jpg" alt="약물백과 애보글립틴"></li>
+            </ul>
+          </article>
+
+          <!-- 탭메뉴1 -->
+          <article>
+            <ul class="tab_btn b1">
+              <li><a href="#">안정성서한</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">Q&amp;A</a></li>
+            </ul>
+
+            <div class="tab_con c1">
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>&#40;주&#41;녹십자, 녹십자-알부민주20%&#40;사람혈청알부민&#41; 자진... <span class="data">2023-12-06</span></li>
+                <li>독감치료제 오셀타미비르, 발록사비르, 페라미비르, ... <span class="data">2023-12-06</span></li>
+                <li>첨단바이오의약품&#40;키메라 항원 수용체 T세포&#40;CAR-T&#41; <span class="data">2023-12-06</span></li>
+                <li>뇌전증치료제 '레비티라세탐'및'클로바참'성분 제제 ... <span class="data">2023-12-06</span></li>
+              </ul>
+            </div>
+
+            <div class="tab_con c1">
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>&#91;입찰 재공고&#93; 대한약사회 사이버연수원 재구축 용역 <span class="data">2023-03-06</span></li>
+                <li>&#91;입찰공고&#93; 대한약사회 사이버연수원 재구축 용역 <span class="data">2023-02-20</span></li>
+                <li>인공지능 개발을 위한 알약 이미지 데이터 <span class="data">2023-02-02</span></li>
+                <li>&#91;입찰용역&#93; 대한약사회 통합 홈페이지 재구축 용역<span class="data">2022-11-11</span></li>
+              </ul>
+            </div>
+
+            <div class="tab_con c1">
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>&#91;공통&#93; 약정원 '여성 호르몬-피임법'주제로 팜리뷰 게재 <span class="data">2023-12-06</span></li>
+                <li>&#91;공통&#93; 약정원, 팜리뷰서 약물 유발성 경련 졍보 제공 <span class="data">2023-12-06</span></li>
+                <li>&#91;공통&#93; 약정원, 온라인 팜리뷰 12월 첫 원고 발행 <span class="data">2023-12-06</span></li>
+                <li>&#91;공통&#93; 약정원, 팜리뷰서 '비만 치료 최신 지견'자료 제... <span class="data">2023-12-06</span></li>
+              </ul>
+            </div>
+
+            <div class="tab_con c1">
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>의약품 API 관련 <span class="data">2023-12-06</span></li>
+                <li>자동대체기능을 만들어주셔서 감사합니다. 한가지 더... <span class="data">2023-12-06</span></li>
+                <li>검색속도가 진짜 너무 느려요 <span class="data">2023-12-06</span></li>
+                <li>실행이 되지 않습니다. <span class="data">2023-12-06</span></li>
+              </ul>
+            </div>
+
+          </article>
+
+          <!-- 탭메뉴2 -->
+          <article>
+            <ul class="tab_btn tab2">
+              <li><a href="#">팜리뷰</a></li>
+              <li><a href="#">허가 리뷰</a></li>
+              <li><a href="#">약물백과</a></li>
+              <li><a href="#">부작용 리포트</a></li>
+            </ul>
+
+            <div class="tab_con c2">
+              <div class="tab2info">
+                <img src="images/tab2infoimg03.jpg" alt="Drug Encyclopedia">
+                <dl>
+                  <dt>&#91;약물&#93;국내 고혈압 진료지침(2022년)</dt>
+                  <dd>2022년 11월 발표된 고혈압 진료지침은 2018년 진료지침을 업데이트한 내용으로 고혈압 선별진료, 혈압측정방법, 혈압분류, 대응혈압, 혈액검사, 약물치료 등 고혈압</dd>
+                </dl>
+              </div>
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>&#91;약물&#93; 국내 고혈압 진료지침(2022년) <span class="data">2023-12-06</span></li>
+                <li>&#91;안전&#93; 약물 유발성 파킨슨 증후군 <span class="data">2023-12-06</span></li>
+                <li>&#91;안전&#93; 환자안전 국제분류체계 개념들을 이용하여 약...<span class="data">2023-12-06</span></li>
+                <li>&#91;약물&#93; 여성호르몬 - 피임<span class="data">2023-12-06</span></li>
+              </ul>
+            </div>
+
+            <div class="tab_con c2">
+              <div class="tab2info">
+                <img src="images/tab2infoimg03.jpg" alt="Drug Encyclopedia">
+                <dl>
+                  <dt>2024년 1월 월간 허가 리뷰</dt>
+                  <dd>'24년 1월에는 총 완제의약품 86품목이 허가되었으며, 99품목의 허가가 취하되었음 신규 허가는 전문의약품이 48.8%(42품목), 일반의학품이 51.2%(44품목)를 차지하였</dd>
+                </dl>
+              </div>
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>2024년 1월 월간 허가 리뷰 <span class="data">2024-02-08</span></li>
+                <li>2023년 12월 월간 허가 리뷰 <span class="data">2023-01-11</span></li>
+                <li>2023년 11월 월간 허가 리뷰 <span class="data">2023-12-28</span></li>
+                <li>2023년 10월 월간 허가 리뷰 <span class="data">2023-11-20</span></li>
+              </ul>
+            </div>
+
+            <div class="tab_con c2">
+              <div class="tab2info">
+                <img src="images/tab2infoimg03.jpg" alt="Drug Encyclopedia">
+                <dl>
+                  <dt>여성 탈모치료제&#58;모발이 가늘어지거나 정수리 가르마 부위가 넓어지는 증상이 나타날 때</dt>
+                  <dd>여성 탈모치료제는 여성의 안드로겐성 탈모, 원형 탈모 및 여러 원인에 의한 모발의 성장장애를 치료하고 모발 건강을 유지하는데 사용하는 약물이다. 현재 국내에 여</dd>
+                </dl>
+              </div>
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>여성 탈모치료제&#58;모발이 가늘어지거나 정수리 가르...<span class="data">2023-12-06</span></li>
+                <li>플루나리진(flunarizine)&#58; 급성 편두통, 어지러움 등의...<span class="data">2023-12-06</span></li>
+                <li>CAR-T세포 지료제&#58; B세포 림프종 백혈병 치료가 필... <span class="data">2023-12-06</span></li>
+                <li>판토프라졸(pantoprazole)&#58; 역류성 식도염, 헬리코박터... <span class="data">2023-12-06</span></li>
+              </ul>
+            </div>
+
+            <div class="tab_con c2">
+              <div class="tab2info">
+                <img src="images/tab2infoimg03.jpg" alt="Adverse Event Report">
+                <dl>
+                  <dt>메틸페니데이트&#40;methylphenidate&#41; &#58; 손&middot;발 감각이상</dt>
+                  <dd></dd>
+                </dl>
+              </div>
+              <div class="tabcon_more">
+                <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
+              </div>
+              <ul>
+                <li>메틸페니데이트&#40;methylphenidate&#41;&#58; 손&middot;발 감각이상 <span class="data">2023-12-06</span></li>
+                <li>아토르바스타틴&#40;atorvastatin&#41;&#58; 습진유사 피부증상<span class="data">2023-12-06</span></li>
+                <li>칼슘&#40;calcium&#41;&#58; 혈뇨 <span class="data">2023-12-06</span></li>
+                <li>아고멜라틴&#40;agomelatine&#41;&#58; 간 효소 증가 <span class="data">2023-12-06</span></li>
+              </ul>
+            </div>
+
+          </article>
+
+
+
+          
+
+        </section>
+        <section class="con3">
+          <article class="login">
+            <ul>
+              <li>
+                <input type="text" placeholder="아이디">
+                <input type="password" placeholder="비밀번호">
+              </li>
+              <li><button title="로그인">로그인</button></li>
+            </ul>
+
+            <div class="checkgroup">
+            <input type="checkbox"><span class="cb">&nbsp;아이디 저장</span>
+            </div>
+
+            <ul class="join">
+              <li>회원가입</li>
+              <li>아이디/비밀번호 찾기</li>
+            </ul>
+
+          </article>
+          <article> <!-- 3-2 배너 1 -->
+            <ul class="s3banner1">
+              <li><img src="images/s3c2banner01.jpg" alt="s3c2배너이미지1"></li>
+              <li><img src="images/s3c2banner02.jpg" alt="s3c2배너이미지2"></li>
+            </ul>
+          </article>
+          <article> <!-- 3-3 배너 2 -->
+            <ul class="s3banner2">
+              <li><img src="images/s3c3banner01.jpg" alt="s3c3배너이미지1"></li>
+              <li><img src="images/s3c3banner02.jpg" alt="s3c3배너이미지2"></li>
+            </ul>
+          </article>
+          <article>
+            <h2><a href="#">Current Data Status</a></h2>
+
+            <table class="currentDataStatus">
+              <caption class="blind">Current Data Status</caption>
+              
+              <tr><td class="now" colspan="3">2024.02.19 현재</td></tr>
+              <tr><th rowspan="2">의약품 <button>상세보기</button> </th><td class="st">Update</td><td>35</td></tr>
+              <tr><td class="st">Total</td><td>47,866</td></tr>
+              <tr><th rowspan="2">식별표시<button>상세보기</button></th><td class="st">Update</td><td>11</td></tr>
+              <tr><td class="st">Total</td><td>26,050</td></tr>
+            </table>
+
+          </article>
+        </section>
+        <section class="con4">
+          <article>
+            <div class="c41nav">
+              <div>위로</div>
+              <div>멈춤</div>
+              <div>아래로</div>
+              <div>전체보기</div>
+            </div>
+            <div class="sites">
+              <ul>
+                <li><img src="images/s4img01.jpg" alt=""></li>
+                <li><img src="images/s4img02.jpg" alt=""></li>
+                <li><img src="images/s4img03.jpg" alt=""></li>
+                <li><img src="images/s4img04.jpg" alt=""></li>
+              </ul>
+              <ul>
+                <li><img src="images/s4img04.jpg" alt=""></li>
+                <li><img src="images/s4img03.jpg" alt=""></li>
+                <li><img src="images/s4img02.jpg" alt=""></li>
+                <li><img src="images/s4img01.jpg" alt=""></li>
+              </ul>
+              <ul>
+                <li><img src="images/s4img01.jpg" alt=""></li>
+                <li><img src="images/s4img02.jpg" alt=""></li>
+                <li><img src="images/s4img03.jpg" alt=""></li>
+                <li><img src="images/s4img04.jpg" alt=""></li>
+              </ul>
+              <ul>
+                <li><img src="images/s4img01.jpg" alt=""></li>
+                <li><img src="images/s4img02.jpg" alt=""></li>
+                <li><img src="images/s4img03.jpg" alt=""></li>
+                <li><img src="images/s4img04.jpg" alt=""></li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner">
+
+        <div class="footer_info1">
+          <h2 class="blind">기타사이트정보</h2>
+          <ul>
+            <li>회사소개</li>
+            <li>인재채용</li>
+            <li>서비스 이용약관</li>
+            <li>이메일주소 무단수집거부</li>
+            <li>개인정보 처리방침</li>
+            <li>법적 책임의 한계</li>
+            <li>이메일 문의</li>
+            <li>광고/제휴 문의</li>
+            <li>포장이미지 등록</li>
+          </ul>
+        </div>
+
+        <div class="footer_info2">
+          <div><img src="images/logo_black.jpg" alt="약학정보원"></div>
+          <div class="more_info">
+            <p>서울특별시 서초구 효령로 194 대한약사회관 B1 (재)약학정보원</p>
+            <dl>
+              <dt>고객지원</dt> 
+              <dd>1670-5877</dd>
+              
+              <dt>TEL</dt>
+              <dd>02-3471-7575</dd>
+              
+              <dt>FAX</dt>
+              <dd>02-3472-9114</dd>
+              
+              <dt>대표자</dt>
+              <dd>최광훈</dd>
+              
+              <dt>사업자번호</dt>
+              <dd>214-82-06424</dd>
+            </dl>
+            <p>&copy;Copyright All Right Reserved &#64; Korea Pharmaceutial Informaton Center Since 2000</p>
+          </div>
+        </div>
+
+    </div> <!--//.inner-->
+  </footer>
+
+
+
+
+<!-- gnb메뉴, sub메뉴 동작 스크립트 -->
+<script>
+  const gnbBg = document.querySelector('.gnb_bg');
+  const subElement = document.querySelectorAll('.sub');
+
+  gnbBg.style.opacity = "0";
+  subElement.forEach((e)=>{e.style.display = "none"});
+  
+
+  document.querySelectorAll('.main').forEach(mainElement => {
+    mainElement.addEventListener('mouseenter', function() {
+      gnbBg.style.opacity = "1";
+
+      const subElement = this.querySelector('.sub');
+      if (subElement) {
+        subElement.style.display = "flex";
+      }
+    });
+
+    mainElement.addEventListener('mouseleave', function() {
+      gnbBg.style.opacity = "0";
+
+      const subElement = this.querySelector('.sub');
+      if (subElement) {
+        subElement.style.display = "none";
+      }
+    });
+  });
+
+</script>
+
+<!-- sitemap 이벤트 (클릭/슬라이드토글) (JQ) -->
+<script>
+  $(function(){
+    // 기본설정
+    $(".sitemap_bg, .sitemap_list").hide();
+
+    // 클릭이벤트
+    $(".lines").on('click', function(){
+      $(".sitemap_bg, .sitemap_list").stop().slideToggle(); // show와 hide를 토글로 변경
+      $(".lines").toggleClass("active");
+      $(".lines .line").toggleClass("active");
+    });
+  });
+</script>
+
+<!-- 1-1 약 색상 클릭시 이벤트 (JQ) --> 
+<script>
+$(function(){
+  // li 클릭했을때 해당li의 border값 변경
+  $(".srch_color li").on('click', function(){
+    event.preventDefault();
+    $(this).toggleClass("active"); //active class on
+  });
+
+  $(function(){
+    $(".srch_selec li").on('click', function(){
+      event.preventDefault();
+      $(this).toggleClass("active");
+    });
+  });
+
+});
+</script>
+
+<!-- 1-4 이미지 hover 효과 -->
+<script>
+
+const s1c4img = document.querySelectorAll('.s1c4menu .defaultimg');
+const s1c4imghover = document.querySelectorAll('.s1c4menu .hoverimg');
+
+s1c4img[0].addEventListener('mouseenter', ()=>{
+  s1c4img[0].style.display="none";
+  s1c4imghover[0].style.display="block";
+});
+s1c4imghover[0].addEventListener('mouseleave', ()=>{
+  s1c4img[0].style.display="block";
+  s1c4imghover[0].style.display="none";
+});
+
+s1c4img[1].addEventListener('mouseenter', ()=>{
+  s1c4img[1].style.display="none";
+  s1c4imghover[1].style.display="block";
+});
+s1c4imghover[1].addEventListener('mouseleave', ()=>{
+  s1c4img[1].style.display="block";
+  s1c4imghover[1].style.display="none";
+});
+
+s1c4img[2].addEventListener('mouseenter', ()=>{
+  s1c4img[2].style.display="none";
+  s1c4imghover[2].style.display="block";
+});
+s1c4imghover[2].addEventListener('mouseleave', ()=>{
+  s1c4img[2].style.display="block";
+  s1c4imghover[2].style.display="none";
+});
+
+s1c4img[3].addEventListener('mouseenter', ()=>{
+  s1c4img[3].style.display="none";
+  s1c4imghover[3].style.display="block";
+});
+s1c4imghover[3].addEventListener('mouseleave', ()=>{
+  s1c4img[3].style.display="block";
+  s1c4imghover[3].style.display="none";
+});
+
+  
+</script>
+
+<!-- 2-1 배너 갤러리  -->
+
+
+<script>
+$(function(){
+
+  //초기설정
+  $(".s2c1banner li").css({ left:-460 });
+  $(".s2c1banner li:first").css({ left:0 });
+
+  function s2Banner(){
+    $(".s2c1banner li:eq(1)").animate({ left:0 }, function(){
+      $(".s2c1banner li:eq(0)").appendTo(".s2c1banner").css({ left:-460 });
+    });
+  };      
+
+  setInterval(s2Banner, 6000);
+
+});
+</script>
+
+<!-- 2-2 탭메뉴 기능 구현 (클릭) --> 
+<script>
+  const tabButtons = document.querySelectorAll('.con2 .tab_btn.b1 li');
+  const tabContents = document.querySelectorAll('.con2 .tab_con.c1');
+
+  const t1bA = document.querySelectorAll('.con2 .tab_btn.b1 li a');
+
+  //초기설정
+  tabContents.forEach(function(e){ //모든 탭콘텐츠 숨김
+    e.style.display='none';
+  }); 
+  tabContents[0].style.display='block'; //첫번째 탭콘텐츠만 보임
+  tabButtons[0].style.backgroundColor="#fff"; //첫번째 탭메뉴 색상 변경
+  tabButtons[0].style.borderBottom="1px solid #fff"; //첫번째 탭메뉴 스타일 지정
+  tabButtons[0].style.borderTop="3px solid #445cc8";
+  t1bA[0].style.color="#333";
+
+  //클릭이벤트
+  tabButtons[0].addEventListener('click', ()=>{
+    event.preventDefault();
+    tabButtons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.borderBottom="1px solid #c0c0c0";
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.backgroundColor="#f8f7f6";
+    });
+    t1bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+
+    //해당 탭버튼 속성값 변경
+    tabButtons[0].style.backgroundColor="white"; 
+    tabButtons[0].style.borderBottom="1px solid white";
+    tabButtons[0].style.borderTop="3px solid #445cc8";
+    t1bA[0].style.color="#333";
+    
+    
+    tabContents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+      e.style.display='none';
+    }); 
+    tabContents[0].style.display="block"; //첫번째 탭콘텐츠만 보임
+  })
+
+  tabButtons[1].addEventListener('click', ()=>{
+    event.preventDefault();
+    tabButtons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.backgroundColor="#f8f7f6";
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.borderBottom="1px solid #c0c0c0";
+    });
+    t1bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+
+    tabButtons[1].style.backgroundColor="white";
+    tabButtons[1].style.borderBottom="1px solid white";
+    tabButtons[1].style.borderTop="3px solid #445cc8";
+    t1bA[1].style.color="#333";
+
+    tabContents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+    e.style.display='none';
+    }); 
+    tabContents[1].style.display="block"; //두번째 탭콘텐츠만 보임
+  })
+
+  tabButtons[2].addEventListener('click', ()=>{
+    event.preventDefault();
+    tabButtons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.backgroundColor="#f8f7f6";
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.borderBottom="1px solid #c0c0c0";
+    });
+    t1bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+    tabButtons[2].style.backgroundColor="white";
+    tabButtons[2].style.borderBottom="1px solid white";
+    tabButtons[2].style.borderTop="3px solid #445cc8";
+    t1bA[2].style.color="#333";
+
+    tabContents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+    e.style.display='none';
+    }); 
+    tabContents[2].style.display="block"; //두번째 탭콘텐츠만 보임
+  })
+
+  tabButtons[3].addEventListener('click', ()=>{
+    event.preventDefault();
+    tabButtons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.backgroundColor="#f8f7f6";
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.borderBottom="1px solid #c0c0c0";
+    });
+    t1bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+
+    tabButtons[3].style.backgroundColor="white";
+    tabButtons[3].style.borderBottom="1px solid white";
+    tabButtons[3].style.borderTop="3px solid #445cc8";
+    t1bA[3].style.color="#333";
+
+    tabContents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+    e.style.display='none';
+    }); 
+    tabContents[3].style.display="block"; //두번째 탭콘텐츠만 보임
+  })
+
+</script>
+
+<!-- 2-3 탭메뉴 기능 구현 (오버)  -->
+<script>
+  const tab2Buttons = document.querySelectorAll('.con2 .tab2 li');
+  const tab2Contents = document.querySelectorAll('.con2 .c2');
+  const t2bA = document.querySelectorAll('.con2 .tab2 li a');
+
+  //초기설정
+  tab2Contents.forEach(function(e){ //모든 탭콘텐츠 숨김
+    e.style.display='none';
+  }); 
+  tab2Contents[0].style.display='block'; //첫번째 탭콘텐츠만 보임
+  tab2Buttons[0].style.backgroundColor="white"; //첫번째 탭메뉴 스타일 지정
+  tab2Buttons[0].style.borderBottom="1px solid #fff"; 
+  tab2Buttons[0].style.borderTop="3px solid #445cc8";
+  t2bA[0].style.color="#333";
+
+  //mouseenter 이벤트
+  tab2Buttons[0].addEventListener('mouseenter', ()=>{
+    event.preventDefault();
+    tab2Buttons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.borderBottom="1px solid #c0c0c0";
+      e.style.backgroundColor="#f8f7f6";
+    });
+    t2bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+
+    //해당 탭버튼 속성값 변경
+    tab2Buttons[0].style.backgroundColor="white"; 
+    tab2Buttons[0].style.borderBottom="1px solid white";
+    tab2Buttons[0].style.borderTop="3px solid #445cc8";
+    t2bA[0].style.color="#333";
+    
+    tab2Contents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+      e.style.display='none';
+    }); 
+    tab2Contents[0].style.display="block"; //첫번째 탭콘텐츠만 보임
+  })
+
+  tab2Buttons[1].addEventListener('mouseenter', ()=>{
+    event.preventDefault();
+    tab2Buttons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.backgroundColor="#f8f7f6";
+      e.style.borderBottom="1px solid #c0c0c0";
+    });
+    t2bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+    tab2Buttons[1].style.backgroundColor="white";
+    tab2Buttons[1].style.borderBottom="1px solid white";
+    tab2Buttons[1].style.borderTop="3px solid #445cc8";
+    t2bA[1].style.color="#333";
+
+    tab2Contents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+    e.style.display='none';
+    }); 
+    tab2Contents[1].style.display="block"; //두번째 탭콘텐츠만 보임
+  })
+
+  tab2Buttons[2].addEventListener('mouseenter', ()=>{
+    event.preventDefault();
+    tab2Buttons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.backgroundColor="#f8f7f6";
+      e.style.borderBottom="1px solid #c0c0c0";
+    });
+    t2bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+    tab2Buttons[2].style.backgroundColor="white";
+    tab2Buttons[2].style.borderBottom="1px solid white";
+    tab2Buttons[2].style.borderTop="3px solid #445cc8";
+    t2bA[2].style.color="#333";
+
+    tab2Contents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+    e.style.display='none';
+    }); 
+    tab2Contents[2].style.display="block"; //두번째 탭콘텐츠만 보임
+  })
+
+  tab2Buttons[3].addEventListener('mouseenter', ()=>{
+    event.preventDefault();
+    tab2Buttons.forEach(function(e){ //모든 탭메뉴 css 초기화
+      e.style.borderTop="1px solid #c0c0c0";
+      e.style.backgroundColor="#f8f7f6";
+      e.style.borderBottom="1px solid #c0c0c0";
+    });
+    t2bA.forEach((e)=>{ //모든 탭메뉴 a색상 초기화
+      e.style.color="silver";
+    })
+    tab2Buttons[3].style.backgroundColor="white";
+    tab2Buttons[3].style.borderBottom="1px solid white";
+    tab2Buttons[3].style.borderTop="3px solid #445cc8";
+    t2bA[3].style.color="#333";
+
+    tab2Contents.forEach(function(e){ //모든 탭콘텐츠 숨기고
+      e.style.display='none';
+    }); 
+    tab2Contents[3].style.display="block"; //두번째 탭콘텐츠만 보임
+  });
+
+</script>
+
+<!-- 3-2 배너 move(JQ) --> 
+<script src="js/jquery-3.6.0.min.js"></script> 
+<script>
+$(function(){
+
+  //초기설정
+  $(".s3banner1 li").css({ left:-217 });
+  $(".s3banner1 li:first").css({ left:0 });
+
+  function slideBanner1(){
+    $(".s3banner1 li:eq(1)").animate({ left:0 }, function(){
+      $(".s3banner1 li:eq(0)").appendTo(".s3banner1").css({ left:-217});
+    });
+  };
+
+  setInterval(slideBanner1, 4000);
+
+});
+</script>
+
+
+<!-- 3-3 배너2 move (JQ) -->
+<script>
+  $(function(){
+  
+    //초기설정
+    $(".s3banner2 li").css({ left: 217 });
+    $(".s3banner2 li:first").css({ left:0 });
+
+    //자동설정
+    function slideBanner2(){
+      $(".s3banner2 li:eq(1)").animate({ left:0 },function(){
+        $(".s3banner2 li:eq(0)").appendTo(".s3banner2").css({ left:-217});
+      });
+    };
+  
+    setInterval(slideBanner2,5000);
+     
+  });
+</script>
+
+
+<!-- 4-1 유관사이트맵 move (JQ) -->
+<script>
+  $(function(){
+
+    //초기설정
+    $(".con4 .sites ul").css({top:80});
+    $(".con4 .sites ul:first").css({top:0});
+
+    //자동설정
+    function slideSites(){
+      $(".con4 .sites ul:eq(1)").animate({ top:0 },function(){
+        $(".con4 .sites ul:eq(0)").appendTo(".sites").css({ top:80 });
+      });
+    };
+
+    setInterval(slideSites,5000);
+
+  });
+</script>
+
+</body>
+
+</html>
